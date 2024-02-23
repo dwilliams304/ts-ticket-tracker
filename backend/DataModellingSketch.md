@@ -1,7 +1,13 @@
 # Backend
 > This is a WIP, there is no info here - just sketching data.
 
-Tickets will look like:
+## Tickets
+Tickets will need a few basic things:
+-unique id
+-description
+-severity that points to a severity-id
+-time open
+-assignees which points to users
 {
     "ticket-id": 123-123-123,
     "ticket-description": "Basic description!",
@@ -10,21 +16,21 @@ Tickets will look like:
     "assignees": ["Name 1", "Name 2", "Name 3"]
 }
 
-Severity data model:
+## Severity
 {
     "severity-id": 0,
     "severity-name": "Default Name",
     "severity-color": "#00000"
 }
 
-Tag data model:
+## Tags
 {
     "tag-id": 0,
     "tag-name": "Default Name",
     "tag-color": "#00000"
 }
 
-User data model:
+## Users
 {
     "role-id": 0,
     "user-id": 3f4211
@@ -33,7 +39,7 @@ User data model:
     "reports-to" other-user-id
 }
 
-Role data model:
+## Roles
 {
     "role-id": 0,
     "role-name": "Administrator",
