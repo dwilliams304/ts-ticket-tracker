@@ -1,7 +1,6 @@
 export default function FilterMenu() {
     return(
         <div>
-            <h2>Filters</h2>
             <div>
                 <select id="project-name" name="project-name">
                     <option value="Project 1">Project 1</option>
