@@ -16,3 +16,26 @@ Severity data model:
     "severity-name": "Default Name",
     "severity-color": "#00000"
 }
+
+Tag data model:
+{
+    "tag-id": 0,
+    "tag-name": "Default Name",
+    "tag-color": "#00000"
+}
+
+User data model:
+{
+    "role-id": 0,
+    "user-id": 3f4211
+    "user-email": "email@email.com",
+    "user-name": "Default Name",
+    "reports-to" other-user-id
+}
+
+Role data model:
+{
+    "role-id": 0,
+    "role-name": "Administrator",
+    "role-group": "Backend",
+}
