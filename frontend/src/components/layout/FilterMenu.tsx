@@ -2,8 +2,9 @@ import "../../styles/pages/tickets.css";
 
 export default function FilterMenu() {
     return(
-        <div>
-            <div className="filter-menu">
+        <div className="filters full-shadow">
+            <h2>Filters</h2>
+            <div className="filter-options">
                 <select id="project-name" name="project-name">
                     <option value="Project 1">Project 1</option>
                     <option value="Project 2">Project 2</option>

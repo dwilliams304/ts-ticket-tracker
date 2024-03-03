@@ -1,9 +1,36 @@
-.filter-menu {
-    
+.filters {
+    width: 70%;
+    height: 80px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+    margin-bottom: 4rem;
 }
 
-.ticket-head {
-    display: flex;
-    justify-content: center;
+.filters h2 {
+    margin: 0;
+}
+
+.filter-options {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.ticket-head {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgb(170, 170, 170);
+
+    margin: auto;
+    padding: 0 1rem;
 }

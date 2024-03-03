@@ -30,6 +30,7 @@ header {
   border: none;
   background-color: rgb(78, 78, 255);
   color: white;
+  font-weight: 400;
   border-radius: 25px;
 }
 
@@ -38,3 +39,10 @@ header {
   height: 30px;
 }
 
+.full-shadow-lite {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.full-shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
