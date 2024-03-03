@@ -1,4 +1,5 @@
 import FilterMenu from "../components/layout/FilterMenu";
+import "../styles/pages/tickets.css"
 
 export default function TicketList(){
     return(
