@@ -1,9 +1,9 @@
 export const Header = () => {
     return(
         <header>
-            <h1>TS Bug Tracker</h1>
+            <button className="btn-modern btn-short">Menu</button>
             <h2>Hello, $Name</h2>
-            <button>Settings</button>
+            <h1>Logo</h1>
         </header>
     );
 }
