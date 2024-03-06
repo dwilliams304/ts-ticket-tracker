@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
 
   --primaryColor: black;
   --secondaryColor: aqua;
@@ -26,12 +26,23 @@ header {
   margin-bottom: 2rem;
 }
 
+.thin-header {
+  font-weight: 300;
+}
+
 .btn-modern {
   border: none;
   background-color: rgb(78, 78, 255);
   color: white;
   font-weight: 400;
   border-radius: 25px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-modern:hover {
+  cursor: pointer;
+  scale: 1.05;
 }
 
 .btn-short {
