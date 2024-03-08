@@ -16,9 +16,9 @@ function App() {
 
   return (
     <>
+      <Sidebar />
       <Header />
       <TicketList />
-      <Sidebar />
     </>
   )
 }
