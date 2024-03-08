@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './styles/index.css';
 
 import { Header } from './components/layout/Header'
+import Sidebar from './components/layout/Sidebar'
 import TicketList from './pages/TicketList'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -17,6 +18,7 @@ function App() {
     <>
       <Header />
       <TicketList />
+      <Sidebar />
     </>
   )
 }
