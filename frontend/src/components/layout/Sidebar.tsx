@@ -1,11 +1,14 @@
 import "../../styles/sidebar.css";
+import DummyIcon from "../../assets/react.svg";
 
 export default function Sidebar(){
     return(
         <aside className="sidebar">
             <div className="profile-details">
-                <img src="" alt="avatar"/>
-                <p>Name</p>
+                <div className="container">
+                    <img src={DummyIcon} alt="avatar"/>
+                    <p>Paul Atreides</p>
+                </div>
                 <p>email@email.com</p>
             </div>
             <div className="sidebar-options">
