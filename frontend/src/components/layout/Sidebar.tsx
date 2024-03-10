@@ -5,10 +5,11 @@ export default function Sidebar(){
     return(
         <aside className="sidebar">
             <div className="profile-details">
-                <div className="container">
+                <div>
                     <img src={DummyIcon} alt="avatar"/>
                     <p>Paul Atreides</p>
                 </div>
+                <h2>Engineering Manager</h2>
                 <p>email@email.com</p>
             </div>
             <div className="sidebar-options">

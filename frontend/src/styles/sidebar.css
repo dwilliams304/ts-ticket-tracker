@@ -22,13 +22,28 @@
     border-radius: 50%;
 }
 
-.profile-details .container {
+.profile-details {
     width: 100%;
+    height: 25%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.profile-details div {
+    display: flex;
+}
+.profile-details h2 {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    flex-basis: 0;
+    font-style: italic;
+    font-size: small;
+    font-weight: 200;
+}
 .sidebar-options ul {
     width: 100%;
     padding: 0;
