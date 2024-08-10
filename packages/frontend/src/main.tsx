@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { NavBar } from './layout';
 import "./index.css";
 
 createRoot(document.getElementById('root')!).render(
@@ -13,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
 export default function App() {
   return (
     <div>
-      <h1 className=''>TypeScript Bug Tracker</h1>
+      <NavBar />
     </div>
   )
 }
