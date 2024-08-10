@@ -1,13 +1,14 @@
 {
   "name": "ts-bug-tracker",
   "version": "1.0.0",
-  "description": "> A full-stack typescript project",
+  "description": "A fully functional TypeScript Bug Tracker",
   "main": "index.js",
   "scripts": {
+    "install-all": "npm install --prefix ./packages/frontend && npm install --prefix ./packages/backend",
     "dev:fe": "npm run dev --prefix ./packages/frontend",
     "test:fe": "npm run test --prefix ./packages/frontend"
   },
-  "author": "",
+  "author": "Davis Williams",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2"
