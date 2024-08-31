@@ -1,5 +1,5 @@
 import { Ticket, TicketFilterMenu, AddTicketButton } from "../components"
-import { fakeTicketData } from "../data/FakeTicketData"
+import { fakeTicketData } from "../data/FakeTicketData.ts"
 
 const options = {
     severity: ['Low', 'Mild', 'Medium', 'High', 'Critical', 'Immediate'],
