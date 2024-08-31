@@ -1,4 +1,5 @@
-import { Ticket, TicketFilterMenu } from "../components"
+import { Ticket, TicketFilterMenu, AddTicketButton } from "../components"
+import { fakeTicketData } from "../data/FakeTicketData"
 
 const options = {
     severity: ['Low', 'Mild', 'Medium', 'High', 'Critical', 'Immediate'],
@@ -6,29 +7,6 @@ const options = {
     tags: ['Data', 'Users', 'UI']
 }
 
-const fakeTicketData = [
-    {
-        daysOpen: 3,
-        description: "This is a fake description",
-        severity: "Low",
-        assignedTo: ["John", "Jane", "Rick"],
-        tags: ["Tag 1", "Tag 2", "Tag 3"]
-    },
-    {
-        daysOpen: 8,
-        description: "This is a fake description",
-        severity: "Low",
-        assignedTo: ["John", "Jane", "Rick"],
-        tags: ["Tag 1", "Tag 2", "Tag 3"]
-    },
-    {
-        daysOpen: 21,
-        description: "Something is happening, fix it! Add length to this string to do proper wrapping",
-        severity: "Critical",
-        assignedTo: ["John", "Jane", "Rick"],
-        tags: ["Tag 1", "Tag 2", "Tag 3"]
-    },
-]
 
 export default function TicketList(){
     return(
@@ -48,6 +26,7 @@ export default function TicketList(){
                     fakeTicketData.map((ticket, i) => <Ticket ticket={ticket} key={i} />)
                 }
             </div>
+            <AddTicketButton />
         </div>
     )
 }

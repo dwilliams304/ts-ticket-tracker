@@ -4,6 +4,7 @@ import { NavBar } from './layout';
 import "./index.css";
 import { TicketList } from './pages';
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
