@@ -18,11 +18,11 @@ export default function TicketFilterMenu(props: FilterMenuProps){
                         return <option key={i}>{opt}</option>
                     })}
                 </select>
-                <select className="border w-1/4">Assigned To
+                {/* <select className="border w-1/4">Assigned To
                     {options.assignedTo.map((opt, i) => {
                         return <option key={i}>{opt}</option>
                     })}
-                </select>
+                </select> */}
                 <select className="border w-1/4">Tags
                     {options.tags.map((opt, i) => {
                         return <option key={i}>{opt}</option>
