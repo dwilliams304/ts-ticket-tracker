@@ -1,10 +1,10 @@
-# Welcome to the TypeScript Bug Tracker
-> A fullstack TypeScript project to track and squash bugs.
+# TypeScript Bug Tracker
 
-## Scripts
-*Nothing here yet*
+> A bug-tracker app that is built with a TypeScript/React front-end
 
+&nbsp;
 
+---
+## Notes
 
-## Developer Notes
-No notes yet.
++ This currently WIP and has incomplete documentation, check back in later!

@@ -1,19 +1,20 @@
 {
   "name": "ts-bug-tracker",
   "version": "1.0.0",
-  "description": "A fully functional TypeScript Bug Tracker",
-  "main": "index.js",
+  "description": "A modular bug tracker built with a TypeScript/React front-end",
+  "main": "index.ts",
   "scripts": {
-    "dev:A": "concurrently --kill-others --success first \"npm run dev:fe\" \"npm run dev:be\"",
-    "install:A": "npm install --prefix ./packages/frontend && npm install --prefix ./packages/backend",
-    "dev:fe": "npm run dev --prefix ./packages/frontend",
-    "test:fe": "npm run test --prefix ./packages/frontend",
-    "dev:be": "npm run dev --prefix ./packages/backend",
-    "test:be": "npm run test --prefix ./packages/backend"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:fe": "cd ./client && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwilliams304/ts-bug-tracker.git"
   },
   "author": "Davis Williams",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+  "bugs": {
+    "url": "https://github.com/dwilliams304/ts-bug-tracker/issues"
+  },
+  "homepage": "https://github.com/dwilliams304/ts-bug-tracker#readme"
 }
