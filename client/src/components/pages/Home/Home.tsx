@@ -1,7 +1,17 @@
+import Bug from "../../Bug";
+import FilterMenu from "../../FIlterMenu";
+import "../../components.css";
+
 export default function Home(){
     return(
-        <>
-            <h1>Home Page</h1>
-        </>
+        <div>
+            <FilterMenu />
+            <div className="bugs-list">
+                <Bug />
+                <Bug />
+                <Bug />
+
+            </div>
+        </div>
     )
 }

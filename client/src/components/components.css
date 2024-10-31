@@ -1,0 +1,47 @@
+.filter-menu {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
+
+    border: 1px solid var(--primaryColor);
+    border-radius: 20px;
+
+    padding: 2rem;
+}
+
+.filter-menu h2  {
+    font-size: 20px;
+    padding-bottom: 2rem;
+}
+
+.filter-menu div {
+    display: flex;
+    justify-content: inherit;
+    gap: 12px;
+}
+
+
+.bugs-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.bug {
+    width: 80%;
+    height: 75px;
+    padding: 0 2rem;
+    border: 1px solid var(--primaryColor);
+    color: var(--textColor);
+    display: flex;
+    gap: 0 12px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
