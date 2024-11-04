@@ -4,8 +4,12 @@
   "description": "A modular bug tracker built with a TypeScript/React front-end",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:fe": "cd ./client && npm run dev"
+    "install:fe": "cd ./client && npm install",
+    "install:be": "cd ./backend && npm install",
+    "test:fe": "cd ./client && npm run test",
+    "test:be": "cd ./backend && npm run test",
+    "dev:fe": "cd ./client && npm run dev",
+    "dev:be": "cd ./backend && npm run dev"
   },
   "repository": {
     "type": "git",

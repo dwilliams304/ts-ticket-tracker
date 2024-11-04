@@ -5,10 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no tests setup for backend!\" && exit 1",
     "dev": "nodemon src/index.ts"
   },
-  "author": "",
+  "author": "Davis Williams",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
