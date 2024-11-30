@@ -6,7 +6,7 @@ type TicketProps = {
 
 export default function Ticket({ticket}: TicketProps){
     return(
-        <div className="bug">
+        <div className="ticket">
             <p>{ticket.dateCreated.toDateString()}</p>
             <p>{ticket.id}</p>
             <p>{ticket.title}</p>

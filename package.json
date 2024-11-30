@@ -1,7 +1,7 @@
 {
-  "name": "ts-bug-tracker",
+  "name": "ts-ticket-tracker",
   "version": "1.0.0",
-  "description": "A modular bug tracker built with a TypeScript/React front-end",
+  "description": "A modular ticket tracker built with a TypeScript/React front-end",
   "main": "index.ts",
   "scripts": {
     "install:fe": "cd ./client && npm install",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dwilliams304/ts-bug-tracker.git"
+    "url": "git+https://github.com/dwilliams304/ts-ticket-tracker.git"
   },
   "author": "Davis Williams",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dwilliams304/ts-bug-tracker/issues"
+    "url": "https://github.com/dwilliams304/ts-ticket-tracker/issues"
   },
-  "homepage": "https://github.com/dwilliams304/ts-bug-tracker#readme"
+  "homepage": "https://github.com/dwilliams304/ts-ticket-tracker#readme"
 }

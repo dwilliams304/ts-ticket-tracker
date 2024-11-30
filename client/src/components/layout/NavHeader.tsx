@@ -1,5 +1,5 @@
 import "./layout.css";
-import DummyLogo from "../../../public/vite.svg";
+import DummyLogo from "../../assets/vite copy.svg";
 
 export default function NavHeader(){
     return(

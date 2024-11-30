@@ -6,7 +6,7 @@ type TicketListProps = {
 }
 export default function TicketList({tickets}: TicketListProps){
     return(
-        <div className="bugs-list">
+        <div className="ticket-list">
             {
                 tickets.map(ticket => (
                     <Ticket 
