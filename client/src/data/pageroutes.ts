@@ -2,14 +2,9 @@ import {
     Home, 
 } from "../components/pages"
 
-type Route = {
-    path: string;
-    element: React.ElementType;
-    protectedRoute: boolean;
-    redirPath?: string;
-}
+import { PageRouteType } from "../types"
 
-export const PageRoutes: Route[] = [
+export const PageRoutes: PageRouteType[] = [
     {
         path: "/",
         element: Home,
