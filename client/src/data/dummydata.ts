@@ -1,11 +1,13 @@
-import { BugType } from "../types";
+import { BasicTicketData } from "../types";
 
-export const DummyBugs: BugType[] = [
+export const DummyTickets: BasicTicketData[] = [
     {
         id: "xx213-4rber-342da",
         dateCreated: new Date(),
-        description: "Test Description",
+        lastUpdate: new Date(),
+        title: "Test Title",
         severity: "Low",
+        type: "Improvement",
         assignedTo: [
         {
             id: "1234",
@@ -14,15 +16,17 @@ export const DummyBugs: BugType[] = [
         }
         ],
         tags: [
-            "Data", "Security"
+            "data", "security"
         ]
     },
     
     {
         id: "kto40-jltlkr-0r4in",
         dateCreated: new Date(),
-        description: "Test Description",
+        lastUpdate: new Date(),
+        title: "Test Title",
         severity: "High",
+        type: "Feature",
         assignedTo: [
         {
             id: "1234",
@@ -31,7 +35,7 @@ export const DummyBugs: BugType[] = [
         }
         ],
         tags: [
-            "Security", "Users"
+            "security", "users"
         ]
     },
 

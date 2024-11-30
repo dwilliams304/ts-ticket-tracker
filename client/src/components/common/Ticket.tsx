@@ -1,19 +1,19 @@
-import { BugType } from "../../types"
+import { BasicTicketData } from "../../types";
 
-type BugProps = {
-    bug: BugType
+type TicketProps = {
+    ticket: BasicTicketData
 }
 
-export default function Bug({bug}: BugProps){
+export default function Ticket({ticket}: TicketProps){
     return(
         <div className="bug">
-            <p>{bug.dateCreated.toDateString()}</p>
-            <p>{bug.id}</p>
-            <p>{bug.description}</p>
-            <p>{bug.severity}</p>
+            <p>{ticket.dateCreated.toDateString()}</p>
+            <p>{ticket.id}</p>
+            <p>{ticket.title}</p>
+            <p>{ticket.severity}</p>
             <div>
                 {
-                    bug.assignedTo.map(user => (
+                    ticket.assignedTo.map(user => (
                         <span key={user.id}>
                             {user.name}
                         </span>
@@ -23,7 +23,7 @@ export default function Bug({bug}: BugProps){
             <p>Tags</p>
             <div>
                 {
-                    bug.tags.map(tag => (
+                    ticket.tags.map(tag => (
                         <span key={tag}>
                             {tag}
                         </span>

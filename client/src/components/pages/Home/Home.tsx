@@ -1,16 +1,16 @@
 import FilterMenu from "../../FIlterMenu";
 import "../../components.css";
-import BugsList from "./BugList";
 
-import { DummyBugs } from "../../../data/dummydata";
+import { DummyTickets } from "../../../data/dummydata";
+import TicketList from "./TicketList";
 
 
 export default function Home(){
     return(
         <div>
             <FilterMenu />
-            <BugsList 
-                bugs={DummyBugs}
+            <TicketList 
+                tickets={DummyTickets}
             />
 
         </div>
