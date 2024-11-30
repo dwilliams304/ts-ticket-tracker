@@ -1,6 +1,6 @@
-# TypeScript Bug Tracker
+# TypeScript Ticket Tracker
 
-> A bug-tracker app that is built with a TypeScript/React front-end
+> A ticket-tracker app that is built with a TypeScript/React front-end
 
 &nbsp;
 
