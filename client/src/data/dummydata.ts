@@ -38,5 +38,157 @@ export const DummyTickets: BasicTicketData[] = [
             "security", "users"
         ]
     },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
+    
+    {
+        id: "kto40-jltlkr-0r4in",
+        dateCreated: new Date(),
+        lastUpdate: new Date(),
+        title: "Test Title",
+        severity: "High",
+        type: "Feature",
+        assignedTo: [
+        {
+            id: "1234",
+            name: "Sarah",
+            email: "sarah@example.com"
+        }
+        ],
+        tags: [
+            "security", "users"
+        ]
+    },
 
 ]

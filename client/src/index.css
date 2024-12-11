@@ -12,13 +12,32 @@
 
 
   /* Colors */
-  --primaryColor: rgb(181, 0, 236);
-  --secondaryColor: white;
-  --tertiaryColor: white;
+  --primaryColor: #c814ff;
+  --secondaryColor: #881222;
+  --tertiaryColor: #e66647;
   --highlightColor: white;
-  --backgroundColor: #242424;
-  --textColor: white;
-  --textColorDark: black;
+  --backgroundColor: #17041e;
+  --backgroundColorDarkTransparent: #0b020e8b;
+
+  --textColor: #f3dcfa;
+  --textColorDark: #231f24;
 
 
+}
+
+button {
+  padding: 0.5rem 2rem;
+  color: var(--backgroundColor);
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+button:hover {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
 }

@@ -1,10 +1,13 @@
 nav {
     width: 100%;
     display: flex;
+    position: sticky;
+    top: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    position: relative;
+    backdrop-filter: blur(20px);
+    background-color: var(--backgroundColorDarker);
     
     height: 4rem;
     border-bottom: 1px solid var(--primaryColor);
@@ -12,8 +15,7 @@ nav {
 }
 
 nav img {
-    position: absolute;
-    left: 3rem;
+    margin-left: 2rem;
 }
 
 nav h1 {
@@ -21,12 +23,5 @@ nav h1 {
 }
 
 nav button {
-    position: absolute;
-    right: 3rem;
-    padding: 8px 20px;
-    border: 1px solid var(--primaryColor);
-    border-radius: 8px;
-    font-size: 16px;
-
-    cursor: pointer;
+    margin-right: 2rem;
 }
