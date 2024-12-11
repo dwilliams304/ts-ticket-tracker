@@ -7,10 +7,18 @@ type TicketProps = {
 export default function Ticket({ticket}: TicketProps){
     return(
         <div className="ticket">
-            <p>{ticket.dateCreated.toDateString()}</p>
-            <p>{ticket.id}</p>
-            <p>{ticket.title}</p>
-            <p>{ticket.severity}</p>
+            <div>
+                <p>{ticket.dateCreated.toDateString()}</p>
+            </div>
+            <div>
+                <p>{ticket.id}</p>
+            </div>
+            <div>
+                <p>{ticket.title}</p>
+            </div>
+            <div>
+                <p>{ticket.severity}</p>
+            </div>
             <div>
                 {
                     ticket.assignedTo.map(user => (
@@ -20,11 +28,10 @@ export default function Ticket({ticket}: TicketProps){
                     ))
                 }
             </div>
-            <p>Tags</p>
-            <div>
+            <div className="tags">
                 {
                     ticket.tags.map(tag => (
-                        <span key={tag}>
+                        <span key={tag} className="tag">
                             {tag}
                         </span>
                     ))

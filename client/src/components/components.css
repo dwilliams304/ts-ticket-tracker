@@ -45,3 +45,19 @@
     align-items: center;
     text-align: center;
 }
+
+.ticket > div {
+    width: 16.67%;
+}
+
+.ticket .tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ticket .tag {
+    background-color: rgb(34, 0, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
