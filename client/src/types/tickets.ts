@@ -4,7 +4,7 @@ export type User = {
     email: string;
 }
 
-type Severities = "Non-Important" | "Low" | "Medium" | "High" | "Critical";
+type Severities = "None" | "Low" | "Medium" | "High" | "Critical";
 type Tags = "data" | "security" | "users" | "ui/ux";
 type TicketType = "Bug" | "Test" | "Improvement" | "Feature" | "Task" | "Vulernability";
 

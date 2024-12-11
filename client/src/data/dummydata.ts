@@ -44,7 +44,7 @@ export const DummyTickets: BasicTicketData[] = [
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "Test Title",
-        severity: "High",
+        severity: "Critical",
         type: "Feature",
         assignedTo: [
         {
@@ -63,7 +63,7 @@ export const DummyTickets: BasicTicketData[] = [
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "Test Title",
-        severity: "High",
+        severity: "Medium",
         type: "Feature",
         assignedTo: [
         {

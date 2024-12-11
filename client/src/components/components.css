@@ -47,7 +47,24 @@
 }
 
 .ticket > div {
-    width: 16.67%;
+    width: 20.5%;
+}
+
+/* .ticket .id, .ticket .title,
+.ticket .assigned-to, .ticket .tags {
+    width: 20.5%;
+} */
+.ticket .date {
+    width: 12%;
+}
+.ticket .severities {
+    width: 6%;
+}
+
+.ticket .severity {
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: var(--backgroundColor);
 }
 
 .ticket .tags {
