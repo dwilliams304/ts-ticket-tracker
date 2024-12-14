@@ -5,7 +5,7 @@ export type User = {
 }
 
 type Severities = "None" | "Low" | "Medium" | "High" | "Critical";
-type Tags = "data" | "security" | "users" | "ui/ux";
+type Tags = "data" | "security" | "users" | "ui" | "test";
 type TicketType = "Bug" | "Test" | "Improvement" | "Feature" | "Task" | "Vulernability";
 
 

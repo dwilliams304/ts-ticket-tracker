@@ -74,7 +74,7 @@
 }
 
 .ticket .tag {
-    background-color: rgb(34, 0, 255);
+    /* background-color: rgb(34, 0, 255); */
     border-radius: 10px;
     padding: 6px 12px;
 }

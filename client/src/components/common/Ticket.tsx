@@ -13,12 +13,15 @@ const severityColors = {
 }
 
 const tagColors = {
-    Bug: "",
-    Test: "",
-    Improvement: "",
-    Feature: "",
-    Task: "",
-    Vulnerability: "",
+    bug: "#c814ff",
+    test: "#159b15",
+    improvement: "#80159b",
+    feature: "#aacb29",
+    task: "#810c52",
+    ui: "#810c52",
+    users: "#0c8181",
+    security: "#810c0c",
+    data: "#2962cb"
 }
 
 export default function Ticket({ticket}: TicketProps){
@@ -49,7 +52,8 @@ export default function Ticket({ticket}: TicketProps){
             <div className="tags">
                 {
                     ticket.tags.map(tag => (
-                        <span key={tag} className="tag">
+                        <span key={tag} className="tag"
+                        style={{backgroundColor: tagColors[tag as keyof typeof tagColors]}}>
                             {tag}
                         </span>
                     ))

@@ -54,7 +54,7 @@ export const DummyTickets: BasicTicketData[] = [
         }
         ],
         tags: [
-            "security", "users"
+            "ui", "data"
         ]
     },
     
@@ -73,7 +73,7 @@ export const DummyTickets: BasicTicketData[] = [
         }
         ],
         tags: [
-            "security", "users"
+            "security", "test"
         ]
     },
     
