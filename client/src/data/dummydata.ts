@@ -1,5 +1,14 @@
 import { BasicTicketData } from "../types";
 
+export default function TEST_FetchTicketData(id: string) : BasicTicketData | null {
+    for(let i = 0; i < DummyTickets.length; i++){
+        if(DummyTickets[i].id === id){
+            return DummyTickets[i];
+        }
+    }
+    return null;
+}
+
 export const DummyTickets: BasicTicketData[] = [
     {
         id: "xx213-4rber-342da",
