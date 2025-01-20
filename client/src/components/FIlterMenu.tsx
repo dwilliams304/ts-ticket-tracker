@@ -4,15 +4,18 @@ export default function FilterMenu(){
             <h2>Filters</h2>
             <div>
 
-                <select>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                </select>
+                <div>
+                    <label htmlFor="tags">Tags</label>
+                    <select name="tags">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
 
                 
-                <select>
+                <select name="security">
                     <option>Option 1</option>
                     <option>Option 2</option>
                     <option>Option 3</option>

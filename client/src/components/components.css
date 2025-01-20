@@ -33,6 +33,10 @@
     gap: 20px;
 }
 
+.tl-header p {
+    font-weight: bold;
+}
+
 .ticket {
     width: 80%;
     height: 75px;
