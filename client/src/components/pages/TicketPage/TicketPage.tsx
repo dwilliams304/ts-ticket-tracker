@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import TEST_FetchTicketData from "../../../data/dummydata";
-import { BasicTicketData } from "../../../types";
+import { FullTicket } from "../../../types";
 
 
 export default function TicketPage(){
-    const [ticketData, setTicketData] = useState<BasicTicketData | null>();
+    const [ticketData, setTicketData] = useState<FullTicket | null>();
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
     const navTo = useNavigate();
@@ -28,8 +28,8 @@ export default function TicketPage(){
     return(
         <div>
             <h2>Ticket Page!</h2>
-            <p>{ticketData?.title}</p>
-            <p>{ticketData?.dateCreated.toDateString()}</p>
+            <p>{ticketData?.basicDetails.title}</p>
+            <p>{ticketData?.basicDetails.dateCreated.toDateString()}</p>
         </div>
     )
 

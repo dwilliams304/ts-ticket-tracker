@@ -11,7 +11,7 @@ export default function TicketListHeader() {
                 <p>Title</p>
             </div>
             <div className="severities">
-                <p className="severity">Severity</p>
+                <p>Severity</p>
             </div>
             <div className="assigned-to">
                 <p>Assigned To</p>

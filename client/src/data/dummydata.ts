@@ -1,50 +1,82 @@
-import { BasicTicketData } from "../types";
+import { User, BasicTicketData, FullTicket } from "../types";
 
-export default function TEST_FetchTicketData(id: string) : BasicTicketData | null {
+export default function TEST_FetchTicketData(id: string) : FullTicket | null {
     for(let i = 0; i < DummyTickets.length; i++){
-        if(DummyTickets[i].id === id){
+        if(DummyTickets[i].basicDetails.id === id){
             return DummyTickets[i];
         }
     }
     return null;
 }
 
-export const DummyTickets: BasicTicketData[] = [
+export const Users: User[] = [
     {
-        id: "xx213-4rber-342da",
-        dateCreated: new Date(),
-        lastUpdate: new Date(),
-        title: "Test Title",
-        severity: "Low",
-        type: "Improvement",
-        assignedTo: [
-        {
-            id: "1234",
-            name: "Robert",
-            email: "robert@example.com"
-        }
+        id: "1",
+        name: "Robert",
+        email: "rober@example.com"
+    },
+    {
+        id: "2",
+        name: "Jason",
+        email: "jason@example.com"
+    }
+]
+
+export const DummyTickets: FullTicket[] = [
+    {
+        basicDetails: {
+            id: "xx213-4rber-342da",
+            dateCreated: new Date(),
+            lastUpdate: new Date(),
+            title: "Test Title",
+            severity: "Low",
+            type: "Improvement",
+            assignedTo: [ Users[0] ],
+            tags: [
+                "data", "security"
+            ]
+        },
+        longDescription: "",
+        history: [
+            {
+                timestamp: new Date(),
+                user: Users[0]
+            }
         ],
-        tags: [
-            "data", "security"
+        comments: [
+            {
+                timestamp: new Date(),
+                user: Users[0],
+                comments: "No comments"
+            }
         ]
     },
-    
     {
-        id: "kto40-jltlkr-0r4in",
-        dateCreated: new Date(),
-        lastUpdate: new Date(),
-        title: "Test Title",
-        severity: "High",
-        type: "Feature",
-        assignedTo: [
-        {
-            id: "1234",
-            name: "Sarah",
-            email: "sarah@example.com"
-        }
+        basicDetails: {
+            id: "kto40-jltlkr-0r4in",
+            dateCreated: new Date(),
+            lastUpdate: new Date(),
+            title: "Test Title 2",
+            severity: "High",
+            type: "Improvement",
+            assignedTo: [ Users[1] ],
+            tags: [
+                "users", "security"
+            ]
+        },
+        longDescription: "",
+        history: [
+            {
+                timestamp: new Date(),
+                user: Users[1]
+            }
         ],
-        tags: [
-            "security", "users"
+        comments: [
+            {
+                timestamp: new Date(),
+                user: Users[1],
+                comments: "No comments"
+            }
         ]
     },
 
