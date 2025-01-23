@@ -1,13 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import "./layout.css";
 import DummyLogo from "../../assets/vite copy.svg";
 
 export default function NavHeader(){
+    const navTo = useNavigate();
     return(
         <nav>
-            <div>
+            <div
+            onClick={() => navTo(`/`)}>
                 <img
                     src={DummyLogo}
                     alt="Icon"
+                    
                 />
             </div>
             <div>

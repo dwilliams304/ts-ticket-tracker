@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { BasicTicketData } from "../../types";
 
 type TicketProps = {
@@ -25,8 +26,10 @@ const tagColors = {
 }
 
 export default function Ticket({ticket}: TicketProps){
+    const navTo = useNavigate();
     return(
-        <div className="ticket">
+        <div className="ticket"
+        onClick={() => navTo(`ticket/${ticket.id}`)}>
             <div className="date">
                 <p>{ticket.dateCreated.toDateString()}</p>
             </div>
