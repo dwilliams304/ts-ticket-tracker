@@ -52,9 +52,11 @@ export default function TicketPage(){
                         footerTab === "Comments" ?
                         <div>
                             {
-                                ticketData?.comments.map(comment => (
-                                    <div>
+                                ticketData?.comments.map((comment, i) => (
+                                    <div key={i} className="ticket-comment">
                                         <p>{comment.user.name}</p>
+                                        <p>{comment.timestamp.toDateString()}</p>
+                                        <p>{comment.comments}</p>
                                     </div>
                                 ))
                             }

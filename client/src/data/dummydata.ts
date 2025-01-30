@@ -47,8 +47,23 @@ export const DummyTickets: FullTicket[] = [
             {
                 timestamp: new Date(),
                 user: Users[0],
-                comments: "No comments"
-            }
+                comments: "Comment 1"
+            },
+            {
+                timestamp: new Date(),
+                user: Users[0],
+                comments: "Comment 2"
+            },
+            {
+                timestamp: new Date(),
+                user: Users[1],
+                comments: "Comment 3"
+            },
+            {
+                timestamp: new Date(),
+                user: Users[1],
+                comments: "Comment 4"
+            },
         ]
     },
     {
