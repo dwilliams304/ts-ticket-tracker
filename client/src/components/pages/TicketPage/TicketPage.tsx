@@ -30,15 +30,15 @@ export default function TicketPage(){
     return(
         <div className="ticket-page">
             <div className="ticket-header">
-                <h2>Ticket Page!</h2>
-                <p>{ticketData?.basicDetails.title}</p>
-                <p>{ticketData?.basicDetails.dateCreated.toDateString()}</p>
+                <p>Title: {ticketData?.basicDetails.title}</p>
+                <p>Date Opened: {ticketData?.basicDetails.dateCreated.toDateString()}</p>
                 <p>Type: {ticketData?.basicDetails.type}</p>
                 <p>Tags: {
                         ticketData?.basicDetails.tags.map(tag => (<span key={tag}>{tag}</span>))
                     }</p>
             </div>
             <div className="ticket-body">
+                <p>Description:</p>
                 <p>{ticketData?.longDescription}</p>
             </div>
             <div className="ticket-footer">
@@ -50,7 +50,15 @@ export default function TicketPage(){
                 <div>
                     {
                         footerTab === "Comments" ?
-                        <div>Comments Tab</div>
+                        <div>
+                            {
+                                ticketData?.comments.map(comment => (
+                                    <div>
+                                        <p>{comment.user.name}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
                         :
                         <div>History Tab</div>
                     }
