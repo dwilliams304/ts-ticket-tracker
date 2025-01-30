@@ -1,4 +1,4 @@
-import { User, BasicTicketData, FullTicket } from "../types";
+import { User, FullTicket } from "../types";
 
 export default function TEST_FetchTicketData(id: string) : FullTicket | null {
     for(let i = 0; i < DummyTickets.length; i++){
@@ -36,7 +36,7 @@ export const DummyTickets: FullTicket[] = [
                 "data", "security"
             ]
         },
-        longDescription: "",
+        longDescription: "This has a longer description with more in depth details on things that are important with more details about the details about how there is more in depth details about the details that should be more in depth about the details.",
         history: [
             {
                 timestamp: new Date(),
