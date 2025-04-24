@@ -6,7 +6,7 @@ type TicketCommentsProps = {
 export default function TicketComments({comments}: TicketCommentsProps){
 
     return(
-        <div className="comments-container">
+        <div className="container">
             {
                 comments === undefined || comments.length === 0 ?
                 <h2>No comments</h2>

@@ -6,7 +6,7 @@ type TicketHistoryProps = {
 
 export default function TicketHistoryList({history}: TicketHistoryProps){
     return(
-        <div className="history-container">
+        <div className="container">
             {
                 history === undefined || history.length === 0
                 ?

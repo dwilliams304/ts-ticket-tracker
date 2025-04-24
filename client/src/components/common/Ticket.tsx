@@ -13,7 +13,7 @@ const severityColors = {
     Critical: "#ff0000"
 }
 
-const tagColors = {
+export const tagColors = {
     bug: "#c814ff",
     test: "#159b15",
     improvement: "#80159b",

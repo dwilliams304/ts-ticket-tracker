@@ -77,13 +77,13 @@
     color: var(--backgroundColor);
 }
 
-.ticket .tags {
+.tags {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.ticket .tag {
+.tag {
     /* background-color: rgb(34, 0, 255); */
     border-radius: 10px;
     padding: 6px 12px;
@@ -126,24 +126,23 @@
 
 .ticket-subsection
 {
+/*  */
+}
 
+.ticket-subsection .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+    gap: 16px;
 }
 
 /* COMMENTS */
-.comments-container
-{
-
-}
 .comment-item
 {
-
+    
 }
 
 /* HISTORY */
-.history-container
-{
-
-}
 
 .history-item
 {

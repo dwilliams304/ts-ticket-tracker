@@ -7,6 +7,8 @@ import TicketHistoryList from "./TicketHistoryList";
 
 type footertabs = "Comments" | "History";
 
+import { tagColors } from "../../common/Ticket";
+
 export default function TicketPage(){
     const [ticketData, setTicketData] = useState<FullTicket | null>();
     const [isLoading, setIsLoading] = useState(true);
@@ -36,8 +38,13 @@ export default function TicketPage(){
                 <p>Date Opened: {ticketData?.basicDetails.dateCreated.toDateString()}</p>
                 <p>Type: {ticketData?.basicDetails.type}</p>
                 <p>Tags: {
-                        ticketData?.basicDetails.tags.map(tag => (<span key={tag}>{tag}</span>))
-                    }</p>
+                    ticketData?.basicDetails.tags.map(tag => (
+                        <span key={tag} className="tag"
+                        style={{backgroundColor: tagColors[tag as keyof typeof tagColors], fontSize: "16px"}}>
+                            {tag}
+                        </span>
+                    ))
+                }</p>
             </div>
             <div className="ticket-body">
                 <p>Description:</p>
