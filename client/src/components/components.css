@@ -124,10 +124,28 @@
     color: var(--primaryColor);
 }
 
-.ticket-comment {
-    border: 1px solid var(--primaryColor);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 33%;
+.ticket-subsection
+{
+
+}
+
+/* COMMENTS */
+.comments-container
+{
+
+}
+.comment-item
+{
+
+}
+
+/* HISTORY */
+.history-container
+{
+
+}
+
+.history-item
+{
+
 }

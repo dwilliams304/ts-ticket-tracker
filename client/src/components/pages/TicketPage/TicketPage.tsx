@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import TEST_FetchTicketData from "../../../data/dummydata";
 import { FullTicket } from "../../../types";
+import TicketComments from "./TicketComments";
+import TicketHistoryList from "./TicketHistoryList";
 
 type footertabs = "Comments" | "History";
 
@@ -46,23 +48,13 @@ export default function TicketPage(){
                     <h3 onClick={() => setFooterTab("Comments")}>Comments</h3>
                     <h3 onClick={() => setFooterTab("History")}>History</h3>
                 </div>
-                {/* TO-DO: SEPARATE INTO OWN COMPONENT */}
-                <div>
+
+                <div className="ticket-subsection">
                     {
                         footerTab === "Comments" ?
-                        <div>
-                            {
-                                ticketData?.comments.map((comment, i) => (
-                                    <div key={i} className="ticket-comment">
-                                        <p>{comment.user.name}</p>
-                                        <p>{comment.timestamp.toDateString()}</p>
-                                        <p>{comment.comments}</p>
-                                    </div>
-                                ))
-                            }
-                        </div>
+                        <TicketComments comments={ticketData?.comments} />
                         :
-                        <div>History Tab</div>
+                        <TicketHistoryList history={ticketData?.history} />
                     }
                 </div>
             </div>
