@@ -12,10 +12,12 @@ export default function TicketComments({comments}: TicketCommentsProps){
                 <h2>No comments</h2>
                 :
                 comments.map(comment => (
-                    <div key={comment.id} className="comment-item">
-                        <p>{comment.user.name}</p>
-                        <p>{comment.timestamp.toDateString()}</p>
-                        <p>{comment.comments}</p>
+                    <div key={comment.id} className="ticket-subsection-item comment-item">
+                        <div className="meta comment-meta">
+                            <h3>{comment.user.name}</h3>
+                            <p>on {comment.timestamp.toDateString()}</p>
+                        </div>
+                        <p className="comment-content">{comment.comments}</p>
                     </div>
                 ))
             }

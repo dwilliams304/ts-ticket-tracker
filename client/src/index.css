@@ -17,9 +17,11 @@
   --tertiaryColor: #e66647;
   --highlightColor: white;
   --backgroundColor: #17041e;
+  --backgroundColorLight: #460d5b;
   --backgroundColorDarkTransparent: #0b020e8b;
 
   --textColor: #f3dcfa;
+  --textColorDetails: #b6a4bb;
   --textColorDark: #231f24;
 
   color: #810c52;

@@ -109,15 +109,15 @@
 
 .ticket-footer .footer-tabs {
     display: flex;
-    width: 50%;
+    width: 100%;
     gap: 20px;
-    padding-bottom: 2px;
+    padding-bottom: 6px;
     border-bottom: 1px solid var(--primaryColor);
     margin-bottom: 12px;
 }
 
 .footer-tabs h3 {
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
 }
 .footer-tabs h3:hover {
@@ -136,10 +136,34 @@
     gap: 16px;
 }
 
+.ticket-subsection-item
+{
+    padding: 1rem;
+    background-color: var(--backgroundColorLight);
+}
+.ticket-subsection-item .meta
+{
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.ticket-subsection-item .meta p
+{
+    /* text-decoration: underline; */
+    font-style: italic;
+    color: var(--textColorDetails);
+    font-size: 14px;
+}
+.ticket-subsection-item h3
+{
+    font-size: 20px;
+    font-weight: 500;
+}
 /* COMMENTS */
 .comment-item
 {
-    
+    /* background-color: var(--backgroundColor); */
 }
 
 /* HISTORY */
