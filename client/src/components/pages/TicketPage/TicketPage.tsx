@@ -52,8 +52,14 @@ export default function TicketPage(){
             </div>
             <div className="ticket-footer">
                 <div className="footer-tabs">
-                    <h3 onClick={() => setFooterTab("Comments")}>Comments</h3>
-                    <h3 onClick={() => setFooterTab("History")}>History</h3>
+                    <h3 onClick={() => setFooterTab("Comments")}
+                    className={`${footerTab === "Comments" && 'active-tab'}`}>
+                        Comments
+                    </h3>
+                    <h3 onClick={() => setFooterTab("History")}
+                    className={`${footerTab === "History" && 'active-tab'}`}>
+                        History
+                    </h3>
                 </div>
 
                 <div className="ticket-subsection">
