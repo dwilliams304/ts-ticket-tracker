@@ -45,6 +45,11 @@ button:hover {
   color: var(--textColor);
 }
 
+nav div img 
+{
+  cursor: pointer;
+}
+
 .active-tab
 {
   color: var(--primaryColor);
