@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { FetchTickets } from "../../../data/dummyTicketData";
+import { FetchTicket } from "../../../data/dummyTicketData";
 import { TicketExtended } from "../../../types";
 import TicketComments from "./TicketComments";
 import TicketHistoryList from "./TicketHistoryList";
@@ -16,7 +16,7 @@ export default function TicketPage(){
 
     useEffect(() => {
         setIsLoading(true);
-        const ticket = FetchTickets(String(ticketID));
+        const ticket = FetchTicket(String(ticketID));
         setTicketData(ticket);
 
         setIsLoading(false);

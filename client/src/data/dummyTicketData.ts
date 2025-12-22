@@ -1,19 +1,17 @@
 import { TicketExtended } from "../types";
-import { FetchBoardUsers } from "./dummyBoardUserData";
+import { FetchBoardUser } from "./dummyBoardUserData";
 
-export function FetchTickets(id: string): TicketExtended
+
+export function FetchTicket(id: string): TicketExtended
 {
-    console.log("Please implement me! Using dummy data.");
-    for(let i = 0; i < Tickets.length; i++){
-        if(Tickets[i].id === id) return Tickets[i];
-    }
-    return Tickets[0]; //Testing only
+    return Tickets[id];
 }
 
 
-const Tickets: TicketExtended[] = [
-    {
+const Tickets: Record<string, TicketExtended> = {
+    "0": {
         id: "0",
+        boardId: "neondivide",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "Neon Divide Ticket 1",
@@ -40,7 +38,7 @@ const Tickets: TicketExtended[] = [
             }
         ],
         assignedTo: [
-            FetchBoardUsers("0")
+            FetchBoardUser("0")
         ],
         basicHeadline: "This is a basic headling, wow!",
         longDescription: "This would be a long description, wow!",
@@ -52,8 +50,9 @@ const Tickets: TicketExtended[] = [
         ]
     },
     
-    {
+    "1": {
         id: "1",
+        boardId: "neondivide",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "Neon Divide Ticket 2",
@@ -80,7 +79,7 @@ const Tickets: TicketExtended[] = [
             }
         ],
         assignedTo: [
-            FetchBoardUsers("0")
+            FetchBoardUser("1")
         ],
         basicHeadline: "This is a basic headling, wow!",
         longDescription: "This would be a long description, wow!",
@@ -91,8 +90,9 @@ const Tickets: TicketExtended[] = [
 
         ]
     },
-    {
+    "2": {
         id: "2",
+        boardId: "2dplatformer",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "2D Platformer Ticket 1",
@@ -119,7 +119,7 @@ const Tickets: TicketExtended[] = [
             }
         ],
         assignedTo: [
-            FetchBoardUsers("0")
+            FetchBoardUser("2")
         ],
         basicHeadline: "This is a basic headling, wow!",
         longDescription: "This would be a long description, wow!",
@@ -130,8 +130,9 @@ const Tickets: TicketExtended[] = [
 
         ]
     },
-    {
+    "3": {
         id: "3",
+        boardId: "2dplatformer",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "2D Platformer Ticket 2",
@@ -158,7 +159,7 @@ const Tickets: TicketExtended[] = [
             }
         ],
         assignedTo: [
-            FetchBoardUsers("0")
+            FetchBoardUser("3")
         ],
         basicHeadline: "This is a basic headling, wow!",
         longDescription: "This would be a long description, wow!",
@@ -170,4 +171,4 @@ const Tickets: TicketExtended[] = [
         ]
     },
 
-]
+}

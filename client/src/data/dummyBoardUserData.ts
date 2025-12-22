@@ -1,17 +1,16 @@
 import { BoardUserExtended } from "../types";
 
-export function FetchBoardUsers(id: string): BoardUserExtended
+export function FetchBoardUser(id: string): BoardUserExtended
 {
-    console.log("Please implement me! Using dummy data.");
-    for(let i = 0; i < BoardUsers.length; i++){
-        if(BoardUsers[i].id === id) return BoardUsers[i];
-    }
-    return BoardUsers[0]; //Testing only
+    return BoardUsersMap[id] || null;
 }
 
+export function FetchAllBoardUsers(): BoardUserExtended[]{
+    return Object.values(BoardUsersMap);
+}
 
-const BoardUsers: BoardUserExtended[] = [
-    {
+const BoardUsersMap: Record<string, BoardUserExtended> = {
+    "0":    {
         id: "0",
         name: "John Smith",
         image: "google.com",
@@ -23,11 +22,7 @@ const BoardUsers: BoardUserExtended[] = [
                 name: "Front-End",
                 color: "#00FFFF",
                 image: "google.com",
-                managers: [
-                    "John Smith",
-                    "Billy Bob",
-                    "Unknown User"
-                ]
+                managers: ["0"]
             }
         },
         meta: {
@@ -40,7 +35,7 @@ const BoardUsers: BoardUserExtended[] = [
             ]
         },
     },
-    {
+    "1":     {
         id: "1",
         name: "Billy Bob",
         image: "google.com",
@@ -52,11 +47,7 @@ const BoardUsers: BoardUserExtended[] = [
                 name: "Front-End",
                 color: "#00FFFF",
                 image: "google.com",
-                managers: [
-                    "John Smith",
-                    "Billy Bob",
-                    "Unknown User"
-                ]
+                managers: ["0"]
             }
         },
         meta: {
@@ -69,7 +60,7 @@ const BoardUsers: BoardUserExtended[] = [
             ]
         },
     },
-    {
+    "2":     {
         id: "2",
         name: "Mary White",
         image: "google.com",
@@ -96,8 +87,7 @@ const BoardUsers: BoardUserExtended[] = [
             ]
         },
     },
-    
-    {
+    "3":     {
         id: "3",
         name: "James Gordon",
         image: "google.com",
@@ -109,9 +99,7 @@ const BoardUsers: BoardUserExtended[] = [
                 name: "Design",
                 color: "#35883cff",
                 image: "google.com",
-                managers: [
-                    "James Gordon",
-                ]
+                managers: ["3"]
             }
         },
         meta: {
@@ -124,5 +112,4 @@ const BoardUsers: BoardUserExtended[] = [
             ]
         },
     },
-    
-]
+}

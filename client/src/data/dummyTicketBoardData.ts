@@ -1,6 +1,6 @@
 import { TicketBoardExtended } from "../types";
-import { FetchBoardUsers } from "./dummyBoardUserData";
-import { FetchTickets } from "./dummyTicketData";
+import { FetchBoardUser } from "./dummyBoardUserData";
+import { FetchTicket } from "./dummyTicketData";
 
 import TestImage1 from "../../public/gradient256.png";
 import TestImage2 from "../../public/moon256.jpg";
@@ -57,13 +57,13 @@ const TicketBoards: TicketBoardExtended[] = [
         ],
 
         assignees: [
-            FetchBoardUsers("0"),
-            FetchBoardUsers("1")
+            FetchBoardUser("0"),
+            FetchBoardUser("1")
         ],
-        admin: FetchBoardUsers("0"),
+        admin: FetchBoardUser("0"),
         tickets: [
-            FetchTickets("0"),
-            FetchTickets("1")
+            FetchTicket("0"),
+            FetchTicket("1")
         ]
     },
     {
@@ -104,13 +104,13 @@ const TicketBoards: TicketBoardExtended[] = [
         ],
 
         assignees: [
-            FetchBoardUsers("2"),
-            FetchBoardUsers("3")
+            FetchBoardUser("2"),
+            FetchBoardUser("3")
         ],
-        admin: FetchBoardUsers("2"),
+        admin: FetchBoardUser("2"),
         tickets: [
-            FetchTickets("2"),
-            FetchTickets("3")
+            FetchTicket("2"),
+            FetchTicket("3")
         ]
     }
 ]

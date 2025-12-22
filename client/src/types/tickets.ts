@@ -7,6 +7,7 @@ import { User } from "./users";
 export interface Ticket 
 {
     id: string;
+    boardId: string;
     dateCreated: Date;
     lastUpdate: Date;
     title: string;
