@@ -21,13 +21,11 @@ export default function TicketPage(){
 
         setIsLoading(false);
 
-        return () => {
-            setIsLoading(false)
-        }
-    }, [])
+        setIsLoading(false);
+    }, [ticketID])
 
     if(isLoading) return <p>Loading data...</p>
-    if(!isLoading && ticketData === null) navTo('/');
+    if(!isLoading && !ticketData) navTo('/');
 
     return(
         <div className="ticket-page">

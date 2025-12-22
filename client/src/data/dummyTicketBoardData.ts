@@ -2,11 +2,11 @@ import { TicketBoardExtended } from "../types";
 import { FetchBoardUsers } from "./dummyBoardUserData";
 import { FetchTickets } from "./dummyTicketData";
 
-export function FetchTicketBoardData(name: string): TicketBoardExtended
+export function FetchTicketBoardData(id: string): TicketBoardExtended
 {
     console.log("Please implement me! Using dummy data.");
     for(let i = 0; i < TicketBoards.length; i++){
-        if(TicketBoards[i].title === name) return TicketBoards[i];
+        if(TicketBoards[i].id === id) return TicketBoards[i];
     }
     return TicketBoards[0]; //TESTING ONLY
 }
@@ -17,7 +17,7 @@ export function FetchAllTicketBoards(): TicketBoardExtended[]{
 
 const TicketBoards: TicketBoardExtended[] = [
     {
-        id: "0",
+        id: "neondivide",
         title: "Neon Divide",
         coverImage: "google.com",
         boardColor: "#FF00FF",
@@ -64,7 +64,7 @@ const TicketBoards: TicketBoardExtended[] = [
         ]
     },
     {
-        id: "1",
+        id: "2dplatformer",
         title: "2D Platformer",
         coverImage: "google.com",
         boardColor: "#626262ff",

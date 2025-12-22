@@ -16,15 +16,13 @@ export default function TicketBoard(){
 
         setBoardData(data);
 
-        return () => {
-            setIsLoading(false)
-        }
-    }, [])
+        setIsLoading(false);
+    }, [boardName])
     
 
     
     if(isLoading) return <p>Loading data...</p>
-    if(!isLoading && boardData === null) navTo('/');
+    if(!isLoading && !boardData) navTo('/');
     return(
         <div>
             <FilterMenu />
