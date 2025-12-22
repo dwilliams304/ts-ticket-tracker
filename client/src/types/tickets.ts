@@ -1,45 +1,24 @@
-export type User = {
-    id: string;
-    name: string;
-    email: string;
-    department: string;
-    role: Role;
-}
-
-type Severities = "None" | "Low" | "Medium" | "High" | "Critical";
-type Tags = "data" | "security" | "users" | "ui" | "test";
-type TicketType = "Bug" | "Test" | "Improvement" | "Feature" | "Task" | "Vulernability";
-type Role = "Developer" | "Leader" | "Manager" | "Admin";
 
 
-export type BasicTicketData = {
+import { Comment, CustomBoardOption, HistoryLog } from "./common";
+import { User } from "./users";
+
+
+export interface Ticket 
+{
     id: string;
     dateCreated: Date;
     lastUpdate: Date;
-    dateFinished?: Date;
-    type: TicketType;
     title: string;
-    severity: Severities;
+    ticketType: CustomBoardOption;
+    severity: CustomBoardOption;
+    tags: CustomBoardOption[];
     assignedTo: User[];
-    tags: Tags[];
 }
 
-export type TicketHistory = {
-    id: string;
-    timestamp: Date;
-    user: User;
-    commit: string;
-}
-export type Comment = {
-    id: string;
-    timestamp: Date;
-    user: User;
-    comments: string;
-}
-
-export type FullTicket = {
-    basicDetails: BasicTicketData;
+export interface TicketExtended extends Ticket {
+    basicHeadline: string;
     longDescription: string;
-    history: TicketHistory[];
+    history: HistoryLog[];
     comments: Comment[];
 }

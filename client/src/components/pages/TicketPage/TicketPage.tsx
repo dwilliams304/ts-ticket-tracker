@@ -1,24 +1,22 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import TEST_FetchTicketData from "../../../data/dummydata";
-import { FullTicket } from "../../../types";
+import { FetchTickets } from "../../../data/dummyTicketData";
+import { TicketExtended } from "../../../types";
 import TicketComments from "./TicketComments";
 import TicketHistoryList from "./TicketHistoryList";
 
 type footertabs = "Comments" | "History";
 
-import { tagColors } from "../../common/Ticket";
-
 export default function TicketPage(){
-    const [ticketData, setTicketData] = useState<FullTicket | null>();
+    const [ticketData, setTicketData] = useState<TicketExtended | null>();
     const [isLoading, setIsLoading] = useState(true);
     const [footerTab, setFooterTab] = useState<footertabs>("Comments");
-    const { id } = useParams();
+    const { ticketID } = useParams();
     const navTo = useNavigate();
 
     useEffect(() => {
         setIsLoading(true);
-        const ticket = TEST_FetchTicketData(String(id));
+        const ticket = FetchTickets(String(ticketID));
         setTicketData(ticket);
 
         setIsLoading(false);
@@ -34,14 +32,14 @@ export default function TicketPage(){
     return(
         <div className="ticket-page">
             <div className="ticket-header">
-                <p>Title: {ticketData?.basicDetails.title}</p>
-                <p>Date Opened: {ticketData?.basicDetails.dateCreated.toDateString()}</p>
-                <p>Type: {ticketData?.basicDetails.type}</p>
+                <p>Title: {ticketData?.title}</p>
+                <p>Date Opened: {ticketData?.dateCreated.toDateString()}</p>
+                <p>Type: {ticketData?.ticketType.name}</p>
                 <p>Tags: {
-                    ticketData?.basicDetails.tags.map(tag => (
-                        <span key={tag} className="tag"
-                        style={{backgroundColor: tagColors[tag as keyof typeof tagColors], fontSize: "16px"}}>
-                            {tag}
+                    ticketData?.tags.map(tag => (
+                        <span key={tag.name} className="tag"
+                        style={{backgroundColor: tag.color, fontSize: "16px"}}>
+                            {tag.name}
                         </span>
                     ))
                 }</p>

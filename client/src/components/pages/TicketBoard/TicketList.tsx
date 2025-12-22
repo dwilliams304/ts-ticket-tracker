@@ -1,19 +1,19 @@
-import Ticket from "../../common/Ticket";
-import { FullTicket } from "../../../types";
+import Ticket from "./Ticket";
+import { Ticket as ITicket } from "../../../types";
 import TicketListHeader from "./TicketListHeader";
 
 type TicketListProps = {
-    tickets: FullTicket[];
+    tickets: ITicket[] | undefined;
 }
 export default function TicketList({tickets}: TicketListProps){
     return(
         <div className="ticket-list">
             <TicketListHeader />
             {
-                tickets.map(ticket => (
+                tickets?.map(ticket => (
                     <Ticket 
-                        ticket={ticket.basicDetails} 
-                        key={ticket.basicDetails.id} 
+                        ticket={ticket} 
+                        key={ticket.id} 
                     />
                 ))
             }

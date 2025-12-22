@@ -1,28 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { BasicTicketData } from "../../types";
+import { Ticket as ITicket } from "../../../types";
 
 type TicketProps = {
-    ticket: BasicTicketData
-}
-
-const severityColors = {
-    None: "#7f7f7f",
-    Low: "#00c621",
-    Medium: "#eaff00",
-    High: "#ff9500",
-    Critical: "#ff0000"
-}
-
-export const tagColors = {
-    bug: "#c814ff",
-    test: "#159b15",
-    improvement: "#80159b",
-    feature: "#aacb29",
-    task: "#810c52",
-    ui: "#810c52",
-    users: "#0c8181",
-    security: "#810c0c",
-    data: "#2962cb"
+    ticket: ITicket
 }
 
 export default function Ticket({ticket}: TicketProps){
@@ -41,7 +21,7 @@ export default function Ticket({ticket}: TicketProps){
             </div>
             <div className="severities">
                 <p className="severity"
-                style={{backgroundColor: severityColors[ticket.severity]}}>{ticket.severity}</p>
+                style={{backgroundColor: ticket.severity.color}}>{ticket.severity.name}</p>
             </div>
             <div className="assigned-to">
                 {
@@ -55,9 +35,9 @@ export default function Ticket({ticket}: TicketProps){
             <div className="tags">
                 {
                     ticket.tags.map(tag => (
-                        <span key={tag} className="tag"
-                        style={{backgroundColor: tagColors[tag as keyof typeof tagColors]}}>
-                            {tag}
+                        <span key={tag.name} className="tag"
+                        style={{backgroundColor: tag.color}}>
+                            {tag.name}
                         </span>
                     ))
                 }

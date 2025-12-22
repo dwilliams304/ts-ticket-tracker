@@ -1,7 +1,7 @@
-import { TicketHistory } from "../../../types"
+import { HistoryLog } from "../../../types"
 
 type TicketHistoryProps = {
-    history: TicketHistory[] | undefined;
+    history: HistoryLog[] | undefined;
 }
 
 export default function TicketHistoryList({history}: TicketHistoryProps){
@@ -16,9 +16,9 @@ export default function TicketHistoryList({history}: TicketHistoryProps){
                     <div key={history.id} className="ticket-subsection-item history-item">
                         <div className="meta history-meta">
                             <h3>{history.user.name}</h3>
-                            <p>on {history.timestamp.toDateString()}</p>                            
+                            <p>on {history.dateCreated.toDateString()}</p>                            
                         </div>
-                        <p>{history.commit}</p>
+                        <p>{history.content}</p>
                     </div>
                 ))
             }
