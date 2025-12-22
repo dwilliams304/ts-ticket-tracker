@@ -1,0 +1,39 @@
+.ticket-boards-container
+{
+    display: flex;
+    padding: 2rem 4rem;
+    
+    gap: 2rem;
+}
+
+.ticket-board-card
+{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: 1px solid var(--primaryColor);
+
+    transition: all 150ms ease-in-out;
+}
+
+.ticket-board-card:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.ticket-board-card img
+{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.ticket-board-card h2
+{   
+    height: 25%;
+    padding: 2px 10px;
+    text-align: left;
+    font-size: 20px;
+}

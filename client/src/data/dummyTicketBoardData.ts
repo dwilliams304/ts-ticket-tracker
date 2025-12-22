@@ -2,6 +2,9 @@ import { TicketBoardExtended } from "../types";
 import { FetchBoardUsers } from "./dummyBoardUserData";
 import { FetchTickets } from "./dummyTicketData";
 
+import TestImage1 from "../../public/gradient256.png";
+import TestImage2 from "../../public/moon256.jpg";
+
 export function FetchTicketBoardData(id: string): TicketBoardExtended
 {
     console.log("Please implement me! Using dummy data.");
@@ -19,7 +22,7 @@ const TicketBoards: TicketBoardExtended[] = [
     {
         id: "neondivide",
         title: "Neon Divide",
-        coverImage: "google.com",
+        coverImage: TestImage1,
         boardColor: "#FF00FF",
         tags: [
             {
@@ -66,7 +69,7 @@ const TicketBoards: TicketBoardExtended[] = [
     {
         id: "2dplatformer",
         title: "2D Platformer",
-        coverImage: "google.com",
+        coverImage: TestImage2,
         boardColor: "#626262ff",
         tags: [
             {

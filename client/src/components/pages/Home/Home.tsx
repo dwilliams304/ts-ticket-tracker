@@ -1,4 +1,5 @@
 import "../../components.css";
+import "./home.css";
 
 // import TicketList from "./TicketList";
 import TicketBoardCard from "./TicketBoardCard";
@@ -17,7 +18,7 @@ export default function Home(){
     }, [])
 
     return(
-        <div>
+        <div className="ticket-boards-container">
             {
                 ticketBoards?.map(board => (
                     <TicketBoardCard board={board} />

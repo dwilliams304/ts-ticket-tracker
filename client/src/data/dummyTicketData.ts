@@ -92,7 +92,7 @@ const Tickets: TicketExtended[] = [
         ]
     },
     {
-        id: "3",
+        id: "2",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "2D Platformer Ticket 1",
@@ -131,7 +131,7 @@ const Tickets: TicketExtended[] = [
         ]
     },
     {
-        id: "4",
+        id: "3",
         dateCreated: new Date(),
         lastUpdate: new Date(),
         title: "2D Platformer Ticket 2",
