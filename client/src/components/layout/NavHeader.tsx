@@ -1,9 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import "./layout.css";
 import DummyLogo from "../../assets/vite copy.svg";
+import { User } from "../../types";
 
-export default function NavHeader(){
+type NavHeaderProps = {
+    user: User | null;
+    login: () => void;
+    logout: () => void;
+}
+
+export default function NavHeader({user, login, logout}: NavHeaderProps){
     const navTo = useNavigate();
+    
+
     return(
         <nav>
             <div
@@ -21,6 +30,12 @@ export default function NavHeader(){
                 <button>
                     Help
                 </button>
+                {
+                    user ?
+                    <button onClick={logout}>Logout</button>
+                    :
+                    <button onClick={login}>Login</button>
+                }
             </div>
         </nav>
     )
