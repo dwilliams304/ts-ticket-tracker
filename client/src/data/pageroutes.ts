@@ -1,6 +1,6 @@
 import TestUserAuthenticationPage from "../components/common/TestUserAuthenticationPage"
 import { 
-    Home, 
+    Dashboard,
     TicketPage
 } from "../components/pages"
 import TicketBoard from "../components/pages/TicketBoard/TicketBoard"
@@ -10,7 +10,7 @@ import { PageRouteType } from "../types"
 export const PageRoutes: PageRouteType[] = [
     {
         path: "/dashboard",
-        element: Home,
+        element: Dashboard,
         protectedRoute: false
     },
     {

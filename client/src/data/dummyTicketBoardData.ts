@@ -20,7 +20,7 @@ export function FetchAllTicketBoards(): TicketBoardExtended[]{
 
 const TicketBoards: TicketBoardExtended[] = [
     {
-        id: "neondivide",
+        id: "0",
         title: "Neon Divide",
         coverImage: TestImage1,
         boardColor: "#FF00FF",
@@ -67,7 +67,7 @@ const TicketBoards: TicketBoardExtended[] = [
         ]
     },
     {
-        id: "2dplatformer",
+        id: "1",
         title: "2D Platformer",
         coverImage: TestImage2,
         boardColor: "#626262ff",

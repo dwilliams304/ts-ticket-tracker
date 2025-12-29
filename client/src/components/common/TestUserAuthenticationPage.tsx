@@ -1,12 +1,13 @@
-import { useEffect } from "react"
+import { useUser } from "../../utils/UserContext";
 
 export default function TestUserAuthenticationPage(){
-    useEffect(() => {
-        console.log("Loaded Authenticated Page!");
-    }, [])
+
+    const user = useUser();
+
     return(
         <div>
             <h1>We are authenticated!</h1>
+            <p>{user?.name}</p>
         </div>
     )
 }

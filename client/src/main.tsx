@@ -13,6 +13,7 @@ import { PageRoutes as PageRoutes } from "./data/pageroutes";
 import { User } from "./types";
 import ProtectedRoute from "./components/common/ProtectedRoute";
 import Landing from "./components/pages/Landing/Landing";
+import { UserContext } from "./utils/UserContext";
 
 
 
@@ -31,25 +32,23 @@ export function App(){
   const handleLogin = () => {
     let testUser: User = {
       id: "1",
-      name: "Davis W",
+      name: "James Gordon",
       email: "test@example.com",
       permissions: ["boardeditor", "admin"],
       image: "noref",
-      currentBoards: [""]
+      currentBoards: ["0"]
     };
 
     setUser(testUser);
-    console.log(`Logged in: ${JSON.stringify(testUser)}`);
   }
 
   const handleLogout = () => {
     setUser(null);
-    console.log("Logged out!");
   }
 
 
   return(
-    <>
+    <UserContext.Provider value={user}>
       <NavHeader 
         user={user}
         login={handleLogin}
@@ -66,18 +65,22 @@ export function App(){
               <Route
                 key={i}
                 path={route.path}
-                element={ <route.element />}
+                element={ <route.element /> }
               />
             )
             :
             (
-              <Route element={<ProtectedRoute isAllowed={user !== null} />}>
-                <Route path={route.path} element={<route.element />} />
+              <Route 
+                key={i}
+                element={
+                <ProtectedRoute isAllowed={user !== null} />
+                }>
+                  <Route path={route.path} element={<route.element />} />
               </Route>
             )
         )
         }
       </Routes>
-    </>
+    </UserContext.Provider>
   )
 }

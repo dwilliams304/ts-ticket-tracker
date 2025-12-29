@@ -1,7 +1,7 @@
-import Home from "./Home/Home";
+import Dashboard from "./Dashboard/Dashboard";
 import TicketPage from "./TicketPage/TicketPage";
 
 export {
-    Home,
+    Dashboard,
     TicketPage
 }
