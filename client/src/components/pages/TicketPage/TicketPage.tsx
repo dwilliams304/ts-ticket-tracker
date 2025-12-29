@@ -34,8 +34,8 @@ export default function TicketPage(){
                 <p>Date Opened: {ticketData?.dateCreated.toDateString()}</p>
                 <p>Type: {ticketData?.ticketType.name}</p>
                 <p>Tags: {
-                    ticketData?.tags.map(tag => (
-                        <span key={tag.name} className="tag"
+                    ticketData?.tags.map((tag, i) => (
+                        <span key={i} className="tag"
                         style={{backgroundColor: tag.color, fontSize: "16px"}}>
                             {tag.name}
                         </span>

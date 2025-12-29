@@ -27,7 +27,7 @@ export default function NavHeader({user, login, logout}: NavHeaderProps){
                 <h1>Hello, $NAME</h1>
             </div>
             <div>
-                <button>
+                <button onClick={() => navTo(`/auth`)}>
                     Help
                 </button>
                 {

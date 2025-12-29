@@ -1,3 +1,4 @@
+import TestUserAuthenticationPage from "../components/common/TestUserAuthenticationPage"
 import { 
     Home, 
     TicketPage
@@ -8,18 +9,24 @@ import { PageRouteType } from "../types"
 
 export const PageRoutes: PageRouteType[] = [
     {
-        path: "/",
+        path: "/dashboard",
         element: Home,
         protectedRoute: false
     },
     {
-        path: ":boardName/ticket/:ticketID",
+        path: "/:boardName/ticket/:ticketID",
         element: TicketPage,
         protectedRoute: false
     },
     {
-        path: ":boardName",
+        path: "/:boardName",
         element: TicketBoard,
         protectedRoute: false
+    },
+    {
+        path: "/auth",
+        element: TestUserAuthenticationPage,
+        protectedRoute: true,
+        redirPath: "/dashboard"
     }
 ]

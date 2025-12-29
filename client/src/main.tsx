@@ -11,6 +11,8 @@ import {
 
 import { PageRoutes as PageRoutes } from "./data/pageroutes";
 import { User } from "./types";
+import ProtectedRoute from "./components/common/ProtectedRoute";
+import Landing from "./components/pages/Landing/Landing";
 
 
 
@@ -32,7 +34,8 @@ export function App(){
       name: "Davis W",
       email: "test@example.com",
       permissions: ["boardeditor", "admin"],
-      image: "noref"
+      image: "noref",
+      currentBoards: [""]
     };
 
     setUser(testUser);
@@ -54,14 +57,25 @@ export function App(){
       />
 
       <Routes>
+        <Route index element={<Landing />} />
         {
-          PageRoutes.map(route => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={ <route.element />}
-            />
-          ))
+          PageRoutes.map((route, i) => 
+            !route.protectedRoute 
+            ?
+            (
+              <Route
+                key={i}
+                path={route.path}
+                element={ <route.element />}
+              />
+            )
+            :
+            (
+              <Route element={<ProtectedRoute isAllowed={user !== null} />}>
+                <Route path={route.path} element={<route.element />} />
+              </Route>
+            )
+        )
         }
       </Routes>
     </>

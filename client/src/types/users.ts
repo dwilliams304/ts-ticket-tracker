@@ -58,6 +58,7 @@ export interface User {
     image: string;
     email: string;
     permissions: string[];
+    currentBoards: string[];
 }
 
 

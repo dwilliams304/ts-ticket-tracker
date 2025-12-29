@@ -34,8 +34,8 @@ export default function Ticket({ticket}: TicketProps){
             </div>
             <div className="tags">
                 {
-                    ticket.tags.map(tag => (
-                        <span key={tag.name} className="tag"
+                    ticket.tags.map((tag, i) => (
+                        <span key={i} className="tag"
                         style={{backgroundColor: tag.color}}>
                             {tag.name}
                         </span>

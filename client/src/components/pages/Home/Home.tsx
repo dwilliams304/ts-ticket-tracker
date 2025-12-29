@@ -21,7 +21,7 @@ export default function Home(){
         <div className="ticket-boards-container">
             {
                 ticketBoards?.map(board => (
-                    <TicketBoardCard board={board} />
+                    <TicketBoardCard board={board} key={board.id} />
                 ))
             }
 
